@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div id="flex-content-container">
     </ul>
     </nav>
     <% if notice.present? %>
@@ -19,6 +20,16 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <%= yield %>
+    </div>
+
+
+    <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
   </body>
 </html>
 
