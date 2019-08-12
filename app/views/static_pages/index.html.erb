@@ -2,9 +2,13 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>
-    <a class="navbar-brand" href="#">FLIXTER</a>
+    <%= link_to 'Flixter', root_url, class: 'navbar-brand' %>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item">
+        <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
+      </li>
+      </ul>        
       <li class="nav-item active">
           <ul class="navbar-nav">
       <% if user_signed_in? %>
@@ -30,12 +34,13 @@
     <br />
     <h2>We can help!</h2>
     <br />
-    <%= link_to 'Learn More', '#', class: 'btn btn-success' %>
+    <%= link_to 'Learn More', courses_path, class: 'btn btn-success' %>
     <br /><br />
   </div>
 </div>
 
 <br />
+
 <div class="row feature text-center">
   <div class="col-12 col-sm">
     <h3>Amazing Courses</h3>
