@@ -3,6 +3,7 @@ class LessonsController < ApplicationController
   before_action :require_authorized_for_current_lesson, only: [:show]
 
   def require_authorized_for_current_lesson
+    redirect_to course_path(current_user), alert: 'Not Valid!'
   end
 
 
