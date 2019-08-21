@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_lesson.section.course
+  before_action :require_authorized_for_current_lesson.section.course, only: [:show]
 
   redirect_to root_url, alert: 'Error Message Here'
 
