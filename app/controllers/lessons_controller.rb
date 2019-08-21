@@ -1,4 +1,10 @@
 class LessonsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :require_authorized_for_current_lesson.section.course
+
+  redirect_to root_url, alert: 'Error Message Here'
+
+
   def show
   end
 
