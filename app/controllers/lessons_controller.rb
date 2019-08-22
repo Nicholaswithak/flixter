@@ -20,6 +20,5 @@ class LessonsController < ApplicationController
 
 
 
-
 end
 end
