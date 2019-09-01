@@ -53,7 +53,6 @@
   <% @course.sections.each do |section| %>
   <br /><br />
       <%= section.title %>
-      <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
         <br class="clr" />
           <ul class="section">
             <li data-update-url="<%= instructor_section_path(section) %>">            
